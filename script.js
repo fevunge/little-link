@@ -1,4 +1,3 @@
-// Auto-play background music quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('bgMusic');
     
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     playAudio();
     
-    // Scroll suave para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Efeito de terminal typing no username (opcional)
     const username = document.querySelector('.username');
     if (username) {
         const text = username.textContent;
@@ -67,36 +64,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
     
-    // Observa todos os cards de projeto
+
     document.querySelectorAll('.project-card').forEach(card => {
         observer.observe(card);
     });
     
-    // Efeito de glitch no hover do avatar (opcional)
     const avatar = document.querySelector('.profile-image');
     if (avatar) {
         avatar.addEventListener('mouseenter', () => {
             avatar.style.animation = 'glitch 0.3s ease';
+            avatar.style.opacity = '0.6';
         });
         
         avatar.addEventListener('animationend', () => {
             avatar.style.animation = '';
+            avatar.style.opacity = '1';
         });
     }
-    
-    // Console easter egg
-    console.log('%c┌─────────────────────────────────────┐', 'color: #27084cff');
-    console.log('%c│  Bem-vindo ao meu terminal! 🚀      │', 'color: #031b42ff');
-    console.log('%c│  Feito com ❤️  e pouco café         │', 'color: #0e4f08ff');
-    console.log('%c└─────────────────────────────────────┘', 'color: #230548ff');
-    console.log('%c> Status: Online ✓', 'color: #a6e3a1');
 });
 
 setInterval(() => {
     if (Math.random() > 0.45) {
         document.body.style.opacity = '0.58';
+        console.log('Blink effect triggered');
         setTimeout(() => {
             document.body.style.opacity = '1';
-        }, 50);
+        }, 500);
     }
 }, 3000);
