@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 setInterval(() => {
-    if (Math.random() > 0.55) {
-        document.body.style.opacity = '0.98';
+    if (Math.random() > 0.45) {
+        document.body.style.opacity = '0.58';
         setTimeout(() => {
             document.body.style.opacity = '1';
         }, 50);
