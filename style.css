@@ -56,11 +56,8 @@ body {
     overflow-x: hidden;
 }
 
-/* ============================================
-   RETRO CRT EFFECTS
-   ============================================ */
 
-/* Scanline Effect */
+
 body::before {
     content: "";
     position: fixed;
@@ -85,19 +82,15 @@ body::before {
     100% { transform: translateY(10px); }
 }
 
-/* Glitch Animation */
 @keyframes glitch {
     0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(-2px); }
+    60% { transform: translateX(2px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
 }
 
-/* ============================================
-   CONTAINER
-   ============================================ */
 
 .container {
     max-width: 900px;
@@ -106,9 +99,7 @@ body::before {
     position: relative;
 }
 
-/* ============================================
-   PROFILE HEADER SECTION
-   ============================================ */
+
 
 .profile-header {
     text-align: center;
@@ -122,9 +113,8 @@ body::before {
     overflow: hidden;
 }
 
-/* Terminal Prompt Indicator */
 .profile-header::before {
-    content: ">";
+    content: "_";
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -202,9 +192,6 @@ body::before {
     color: var(--teal);
 }
 
-/* ============================================
-   SECTION TITLES
-   ============================================ */
 
 .section-title {
     color: var(--green);
@@ -214,9 +201,6 @@ body::before {
     border-left: 3px solid var(--green);
 }
 
-/* ============================================
-   LINKS SECTION
-   ============================================ */
 
 .links-section {
     margin-bottom: 3rem;
@@ -247,7 +231,6 @@ body::before {
     position: relative;
 }
 
-/* Tooltip on hover */
 .link-icon::before {
     content: attr(title);
     position: absolute;
@@ -276,9 +259,7 @@ body::before {
     opacity: 1;
 }
 
-/* ============================================
-   PROJECTS SECTION
-   ============================================ */
+
 
 .projects-section {
     margin-bottom: 3rem;
@@ -389,9 +370,7 @@ body::before {
     box-shadow: 0 0 20px rgba(203, 166, 247, 0.4);
 }
 
-/* ============================================
-   ABOUT SECTION / FOOTER
-   ============================================ */
+
 
 .about-section {
     background: var(--surface0);
@@ -426,10 +405,6 @@ body::before {
     10%, 30% { transform: scale(1.1); }
     20%, 40% { transform: scale(1); }
 }
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 
 @media (max-width: 768px) {
     .container {
