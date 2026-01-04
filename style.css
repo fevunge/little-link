@@ -32,6 +32,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 @font-face {
@@ -695,4 +700,3 @@ pre {
 .search-suggestions.active {
   display: block;
 }
-
