@@ -56,8 +56,11 @@ body {
     overflow-x: hidden;
 }
 
+/* ============================================
+   RETRO CRT EFFECTS
+   ============================================ */
 
-
+/* Scanline Effect */
 body::before {
     content: "";
     position: fixed;
@@ -82,15 +85,19 @@ body::before {
     100% { transform: translateY(10px); }
 }
 
+/* Glitch Animation */
 @keyframes glitch {
     0% { transform: translate(0); }
-    20% { transform: translateX(-2px); }
-    40% { transform: translateX(-2px); }
-    60% { transform: translateX(2px); }
-    80% { transform: translateX(2px); }
-    100% { transform: translateX(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
 }
 
+/* ============================================
+   CONTAINER
+   ============================================ */
 
 .container {
     max-width: 900px;
@@ -99,7 +106,9 @@ body::before {
     position: relative;
 }
 
-
+/* ============================================
+   PROFILE HEADER SECTION
+   ============================================ */
 
 .profile-header {
     text-align: center;
@@ -113,8 +122,9 @@ body::before {
     overflow: hidden;
 }
 
+/* Terminal Prompt Indicator */
 .profile-header::before {
-    content: "_";
+    content: ">";
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -192,6 +202,9 @@ body::before {
     color: var(--teal);
 }
 
+/* ============================================
+   SECTION TITLES
+   ============================================ */
 
 .section-title {
     color: var(--green);
@@ -201,6 +214,9 @@ body::before {
     border-left: 3px solid var(--green);
 }
 
+/* ============================================
+   LINKS SECTION
+   ============================================ */
 
 .links-section {
     margin-bottom: 3rem;
@@ -231,6 +247,7 @@ body::before {
     position: relative;
 }
 
+/* Tooltip on hover */
 .link-icon::before {
     content: attr(title);
     position: absolute;
@@ -259,7 +276,9 @@ body::before {
     opacity: 1;
 }
 
-
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
 
 .projects-section {
     margin-bottom: 3rem;
@@ -370,7 +389,9 @@ body::before {
     box-shadow: 0 0 20px rgba(203, 166, 247, 0.4);
 }
 
-
+/* ============================================
+   ABOUT SECTION / FOOTER - VIM EDITOR STYLE
+   ============================================ */
 
 .about-section {
     background: var(--surface0);
@@ -380,10 +401,165 @@ body::before {
     margin-bottom: 2rem;
 }
 
-.about-content p {
-    color: var(--subtext0);
-    margin-bottom: 1rem;
-    line-height: 1.8;
+/* Vim Editor Container */
+.vim-editor {
+    background: var(--mantle);
+    border: 2px solid var(--surface1);
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: 'JetBrainsMono', monospace;
+    margin-bottom: 1.5rem;
+}
+
+/* Vim Status Bar */
+.vim-statusbar {
+    background: var(--surface1);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--surface2);
+    font-size: 0.85rem;
+}
+
+.vim-mode {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.vim-file {
+    color: var(--blue);
+}
+
+.vim-position {
+    color: var(--overlay2);
+}
+
+/* Vim Content Area */
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+.vim-content {
+    display: block;
+    padding: 1.5rem !important;
+    background: var(--crust) !important;
+    max-height: 500px;
+    overflow-y: auto;
+    white-space: pre;
+    font-family: 'JetBrainsMono', monospace !important;
+    line-height: 1.8 !important;
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Override Prism.js colors with Catppuccin */
+.vim-content .token.property,
+.vim-content .token.tag,
+.vim-content .token.boolean,
+.vim-content .token.number,
+.vim-content .token.constant,
+.vim-content .token.symbol {
+    color: var(--blue) !important;
+}
+
+.vim-content .token.string,
+.vim-content .token.char,
+.vim-content .token.attr-value {
+    color: var(--green) !important;
+}
+
+.vim-content .token.punctuation {
+    color: var(--text) !important;
+}
+
+.vim-content .token.operator,
+.vim-content .token.entity,
+.vim-content .token.url {
+    color: var(--sky) !important;
+}
+
+.vim-content .token.selector,
+.vim-content .token.keyword {
+    color: var(--mauve) !important;
+}
+
+.vim-content .token.function {
+    color: var(--blue) !important;
+}
+
+.vim-content .token.comment {
+    color: var(--overlay0) !important;
+}
+
+/* JSON Syntax Highlighting - Catppuccin Colors */
+.vim-key {
+    color: var(--blue);
+}
+
+.vim-string {
+    color: var(--green);
+}
+
+.vim-bracket {
+    color: var(--mauve);
+    font-weight: bold;
+}
+
+.vim-punct {
+    color: var(--text);
+}
+
+.vim-number {
+    color: var(--peach);
+}
+
+.vim-boolean {
+    color: var(--peach);
+}
+
+.vim-null {
+    color: var(--maroon);
+}
+
+/* Vim Cursor Line */
+.vim-cursor {
+    background: rgba(203, 166, 247, 0.1);
+    color: var(--overlay0);
+}
+
+/* Vim Command Line */
+.vim-commandline {
+    background: var(--surface1);
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--surface2);
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.vim-commandline::before {
+    content: '';
+    animation: blink 1s infinite;
+}
+
+/* Scrollbar customization for Vim content */
+.vim-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.vim-content::-webkit-scrollbar-track {
+    background: var(--crust);
+}
+
+.vim-content::-webkit-scrollbar-thumb {
+    background: var(--surface2);
+    border-radius: 4px;
+}
+
+.vim-content::-webkit-scrollbar-thumb:hover {
+    background: var(--overlay0);
 }
 
 .footer-credits {
@@ -405,6 +581,10 @@ body::before {
     10%, 30% { transform: scale(1.1); }
     20%, 40% { transform: scale(1); }
 }
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 
 @media (max-width: 768px) {
     .container {
