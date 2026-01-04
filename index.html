@@ -1,98 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fevunge</title>
-    <link rel="icon" sizes="32x32" type="images/png" href="images/sheep.png">
+    <link rel="icon" sizes="32x32" type="images/png" href="images/sheep.png" />
     <link href="https:///prismjs@v1.x/themes/prism.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <header class="profile-header">
-            <div class="profile-image">
-                <img src="images/avatar.png" alt="Profile Picture" />
-            </div>
-            <h1 class="username">@fevunge</h1>
-            <h2 class="title">Human Coder</h2>
-            <p class="bio">designing and creating elegant systems</p>
-            <div class="contact-info">
-                <span class="contact-item">
-                    <i class="fas fa-phone"></i>+244 929 886 205
-                </span>
-                <span class="contact-item">
-                    <i class="fas fa-envelope"></i> fevunge@outlook.com
-                </span>
-            </div>
-        </header>
+      <header class="profile-header">
+        <div class="profile-image">
+          <img src="images/avatar.png" alt="Profile Picture" />
+        </div>
+        <h1 class="username">@fevunge</h1>
+        <h2 class="title">Human Coder</h2>
+        <p class="bio">designing and creating elegant systems</p>
+        <div class="contact-info">
+          <span class="contact-item">
+            <i class="fas fa-phone"></i>+244 929 886 205
+          </span>
+          <span class="contact-item">
+            <i class="fas fa-envelope"></i> fevunge@outlook.com
+          </span>
+        </div>
+      </header>
 
-        <section class="links-section">
-            <h3 class="section-title">Links</h3>
-            <div class="links-grid">
-                <a href="https://github.com/fevunge" class="link-icon" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://x.com/fevunge" class="link-icon" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com/in/fevunge" class="link-icon" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://youtube.com/@fevunge" class="link-icon" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-        </section>
+      <section class="links-section">
+        <h3 class="section-title">Links</h3>
+        <div class="links-grid">
+          <a href="https://github.com/fevunge" class="link-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://x.com/fevunge" class="link-icon" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/fevunge"
+            class="link-icon"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://youtube.com/@fevunge"
+            class="link-icon"
+            title="YouTube"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
 
-        <section class="projects-section">
-            <h3 class="section-title">Contents</h3>
-            <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <article class="project-card">
-                    <div class="card-header">
-                        <img src="images/project1.jpg" alt="Projeto 1" class="card-cover" />
-                        <div class="card-overlay">
-                            <span class="card-type"><i class="fas fa-code"></i></span>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span class="card-date"><i class="far fa-calendar"></i> 15 Dez 2024</span>
-                            <span class="card-author"><i class="far fa-user"></i> Fevunge</span>
-                        </div>
-                        <h4 class="card-title">Sistema de Gerenciamento Terminal</h4>
-                        <p class="card-description">
-                            Um projeto revolucionário que integra ferramentas modernas de
-                            desenvolvimento com a simplicidade e eficiência do terminal.
-                            Utilizando tecnologias como Node.js, TypeScript e integrações
-                            com APIs REST, este sistema oferece uma interface de linha de
-                            comando intuitiva para gerenciar projetos, automatizar tarefas
-                            repetitivas e aumentar a produtividade. O projeto é
-                            completamente open-source e conta com documentação extensiva
-                            para facilitar contribuições da comunidade. Ideal para
-                            desenvolvedores que valorizam eficiência e elegância.
-                        </p>
-                        <a href="https://github.com/seuprojeto1" class="card-button" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Ver Projeto
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <div class="vim-editor">
-            <!-- Vim Status Bar -->
-            <div class="vim-statusbar">
-                <span class="vim-mode">-- NORMAL --</span>
-                <span class="vim-file">about.json</span>
-                <span class="vim-position">1,1</span>
-            </div>
+      <section class="projects-section">
+        <h3 class="section-title">Contents</h3>
 
-            <pre><code class="language-json">
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="card-header">
+              <img
+                src="images/project1.jpg"
+                alt="Projeto 1"
+                class="card-cover"
+              />
+              <div class="card-overlay">
+                <span class="card-type"><i class="fas fa-code"></i></span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-date"
+                  ><i class="far fa-calendar"></i> 15 Dez 2024</span
+                >
+                <span class="card-author"
+                  ><i class="far fa-user"></i> Fevunge</span
+                >
+              </div>
+              <h4 class="card-title">Sistema de Gerenciamento Terminal</h4>
+              <p class="card-description">
+                Um projeto revolucionário que integra ferramentas modernas de
+                desenvolvimento com a simplicidade e eficiência do terminal.
+                Utilizando tecnologias como Node.js, TypeScript e integrações
+                com APIs REST, este sistema oferece uma interface de linha de
+              </p>
+              <a
+                href="https://github.com/seuprojeto1"
+                class="card-button"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt"></i> Ver Projeto
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="vim-editor">
+        <div class="vim-statusbar">
+          <span class="vim-mode">-- NORMAL --</span>
+          <span class="vim-file">about.json</span>
+          <span class="vim-position">1,1</span>
+        </div>
+
+        <pre><code class="language-json">
 {
   "name": "Fernando Vunge",
   "role": "Human Coder",
@@ -127,13 +142,18 @@
   ],
   "philosophy": "Clean code, elegant solutions"
 }
-            </code></pre>
-            <div class="vim-commandline">:wq</div>
-        </div> 
+      </code></pre>
+        <div class="vim-commandline">:wq</div>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
+      integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https:///prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
+
