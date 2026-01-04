@@ -1,3 +1,22 @@
+function filterArticles() {
+  let input = document.getElementById('searchInput');
+  let filter = input.value.toUpperCase();
+  let grid = document.querySelector('.projects-grid');
+  let articles = grid.getElementsByTagName('article');
+
+  for (let i = 0; i < articles.length; i++) {
+    let title = articles[i].querySelector('.card-title');
+    let txtValue = title.textContent || title.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      articles[i].style.display = "";
+    } else {
+      articles[i].style.display = "none";
+    }
+  }
+  console.log('Filtering articles with query:', filter);
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

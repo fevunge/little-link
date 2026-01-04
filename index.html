@@ -56,10 +56,24 @@
           </a>
         </div>
       </section>
-
+      <br><br><br>
+      <section class="search-section">
+          <div class="search-container">
+              <i class="fas fa-search search-icon"></i>
+              <input 
+                  type="text" 
+                  class="search-input" 
+                  placeholder="Search projects, articles, skills..."
+                  id="searchInput"
+                  onkeyup="filterArticles()"
+              >
+              <button class="search-clear" id="clearSearch">
+                  <i class="fas fa-times"></i>
+              </button>
+              <div class="search-suggestions" id="searchSuggestions"></div>
+          </div>
+      </section>
       <section class="projects-section">
-        <h3 class="section-title">Contents</h3>
-
         <div class="projects-grid">
           <article class="project-card">
             <div class="card-header">
