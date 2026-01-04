@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 setInterval(() => {
     if (Math.random() > 0.45) {
-        document.body.style.opacity = '0.58';
+        document.body.style.opacity = '0.78';
         console.log('Blink effect triggered');
         setTimeout(() => {
             document.body.style.opacity = '1';
-        }, 500);
+        }, 50);
     }
 }, 3000);
