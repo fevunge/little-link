@@ -1,18 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const audio = document.getElementById('bgMusic');
-    
-    // Tentar tocar automaticamente
-    const playAudio = () => {
-        audio.play().catch(err => {
-            console.log('Autoplay bloqueado. Aguardando interação do usuário.');
-            // Se o autoplay for bloqueado, toca no primeiro clique
-            document.body.addEventListener('click', () => {
-                audio.play();
-            }, { once: true });
-        });
-    };
-    
-    playAudio();
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
