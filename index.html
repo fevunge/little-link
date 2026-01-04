@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Nome - Link Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <header class="profile-header">
+            <div class="profile-image">
+                <img src="images/avatar.png" alt="Profile Picture">
+            </div>
+            <h1 class="username">@fevunge</h1>
+            <h2 class="title">Human Coder</h2>
+            <p class="bio">
+                designing and creating elegant systems                
+            </p>
+            <div class="contact-info">
+                <span class="contact-item">
+                    <i class="fas fa-phone"></i>+244 929 886 205
+                </span>
+                <span class="contact-item">
+                    <i class="fas fa-envelope"></i> fevunge@outlook.com
+                </span>
+            </div>
+        </header>
+
+        <section class="links-section">
+            <h3 class="section-title">// Links</h3>
+            <div class="links-grid">
+                <a href="https://github.com/fevunge" class="link-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/fevunge" class="link-icon" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/fevunge" class="link-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@fevunge" class="link-icon" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h3 class="section-title">// Projetos & Publicações</h3>
+            <div class="projects-grid">
+                
+                <!-- Project Card 1 -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <img src="images/project1.jpg" alt="Projeto 1" class="card-cover">
+                        <div class="card-overlay">
+                            <span class="card-type"><i class="fas fa-code"></i></span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 15 Dez 2024</span>
+                            <span class="card-author"><i class="far fa-user"></i> Fevunge</span>
+                        </div>
+                        <h4 class="card-title">Sistema de Gerenciamento Terminal</h4>
+                        <p class="card-description">
+                            Um projeto revolucionário que integra ferramentas modernas de desenvolvimento 
+                            com a simplicidade e eficiência do terminal. Utilizando tecnologias como 
+                            Node.js, TypeScript e integrações com APIs REST, este sistema oferece uma 
+                            interface de linha de comando intuitiva para gerenciar projetos, automatizar 
+                            tarefas repetitivas e aumentar a produtividade. O projeto é completamente 
+                            open-source e conta com documentação extensiva para facilitar contribuições 
+                            da comunidade. Ideal para desenvolvedores que valorizam eficiência e elegância.
+                        </p>
+                        <a href="https://github.com/seuprojeto1" class="card-button" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Ver Projeto
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <img src="images/project2.jpg" alt="Projeto 2" class="card-cover">
+                        <div class="card-overlay">
+                            <span class="card-type"><i class="fas fa-blog"></i></span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 10 Dez 2024</span>
+                            <span class="card-author"><i class="far fa-user"></i> Seu Nome</span>
+                        </div>
+                        <h4 class="card-title">Guia Completo: Arch Linux Setup</h4>
+                        <p class="card-description">
+                            Documentação detalhada sobre como configurar um ambiente de desenvolvimento 
+                            perfeito no Arch Linux. Este guia cobre desde a instalação base do sistema 
+                            até a configuração de ferramentas essenciais como Alacritty, Oh My Zsh, 
+                            Starship prompt, e muito mais. Inclui scripts de automação, dotfiles 
+                            personalizados e dicas avançadas para otimização de performance. Perfeito 
+                            para quem está começando com Arch ou quer refinar seu setup existente. 
+                            Aborda também temas como gerenciamento de pacotes, customização visual e 
+                            workflow produtivo para desenvolvedores modernos.
+                        </p>
+                        <a href="https://blog.exemplo.com/arch-setup" class="card-button" target="_blank">
+                            <i class="fas fa-book-open"></i> Ler Artigo
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project Card 3 -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <img src="images/project3.jpg" alt="Projeto 3" class="card-cover">
+                        <div class="card-overlay">
+                            <span class="card-type"><i class="fas fa-palette"></i></span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date"><i class="far fa-calendar"></i> 05 Dez 2024</span>
+                            <span class="card-author"><i class="far fa-user"></i> Seu Nome</span>
+                        </div>
+                        <h4 class="card-title">Catppuccin Theme Collection</h4>
+                        <p class="card-description">
+                            Coleção personalizada de temas Catppuccin para diversas aplicações e 
+                            ferramentas de desenvolvimento. Esta collection inclui configurações 
+                            otimizadas para terminais, editores de código, navegadores e muito mais. 
+                            Cada tema foi cuidadosamente ajustado para proporcionar a melhor experiência 
+                            visual possível, mantendo a identidade característica da paleta Catppuccin. 
+                            O projeto também oferece um instalador automático que facilita a aplicação 
+                            dos temas em múltiplas ferramentas simultaneamente. Perfeito para quem 
+                            busca consistência visual em todo o ambiente de trabalho digital.
+                        </p>
+                        <a href="https://github.com/seuprojeto3" class="card-button" target="_blank">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- About Section / Footer -->
+        <footer class="about-section">
+            <h3 class="section-title">// Sobre Mim</h3>
+            <div class="about-content">
+                <p>
+                    Olá! Sou um desenvolvedor apaixonado por tecnologia e código aberto. 
+                    Trabalho principalmente com desenvolvimento web full-stack, utilizando 
+                    tecnologias modernas como React, Node.js, TypeScript e muito mais.
+                </p>
+                <p>
+                    No meu tempo livre, gosto de contribuir para projetos open-source, 
+                    escrever artigos técnicos e explorar novas ferramentas que possam 
+                    melhorar meu workflow de desenvolvimento.
+                </p>
+                <p>
+                    Atualmente uso Arch Linux como meu sistema operacional principal, 
+                    com um setup personalizado que inclui Alacritty, Oh My Zsh e Starship.
+                </p>
+                <div class="footer-credits">
+                    <p>&copy; 2024 Seu Nome. Feito com <i class="fas fa-heart"></i> e muito café.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
