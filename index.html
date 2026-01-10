@@ -1,146 +1,211 @@
 <!doctype html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fevunge</title>
-    <link rel="icon" sizes="32x32" type="images/png" href="images/sheep.png" />
-    <link href="https:///prismjs@v1.x/themes/prism.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="profile-header">
-        <div class="profile-image">
-          <img src="images/avatar.png" alt="Profile Picture" />
-        </div>
-        <h1 class="username">@fevunge</h1>
-        <h2 class="title">Human Coder</h2>
-        <p class="bio">designing and creating elegant systems</p>
-        <div class="contact-info">
-          <span class="contact-item">
-            <i class="fas fa-phone"></i>+244 929 886 205
-          </span>
-          <span class="contact-item">
-            <i class="fas fa-envelope"></i> fevunge@outlook.com
-          </span>
-        </div>
-      </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>fevunge</title>
+        <link
+            rel="icon"
+            sizes="32x32"
+            type="images/png"
+            href="images/sheep.png"
+        />
+        <link href="https:///prismjs@v1.x/themes/prism.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="profile-header">
+                <div class="profile-image">
+                    <img src="images/avatar.png" alt="Profile Picture" />
+                </div>
+                <h1 class="username">@fevunge</h1>
+                <h2 class="title">Human Coder</h2>
+                <p class="bio">designing and creating elegant systems</p>
+                <div class="contact-info">
+                    <span class="contact-item">
+                        <i class="fas fa-phone"></i>+244 929 886 205
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-envelope"></i> fevunge@outlook.com
+                    </span>
+                </div>
+            </header>
 
-      <section class="links-section">
-        <div class="links-grid">
-          <a href="https://github.com/fevunge" class="link-icon" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://x.com/fevunge" class="link-icon" title="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/fevunge"
-            class="link-icon"
-            title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://youtube.com/@fevunge"
-            class="link-icon"
-            title="YouTube"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-      </section>
-      <br /><br /><br />
-      <section class="search-section">
-        <div class="search-container">
-          <i class="fas fa-search search-icon"></i>
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Search projects, articles, skills..."
-            id="searchInput"
-            onkeyup="filterArticles()"
-          />
-          <button class="search-clear" id="clearSearch">
-            <i class="fas fa-times"></i>
-          </button>
-          <div class="search-suggestions" id="searchSuggestions"></div>
-        </div>
-      </section>
-      <section class="projects-section">
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="card-header">
-              <img
-                src="images/project1.png"
-                alt="Projeto 1"
-                class="card-cover"
-              />
-              <div class="card-overlay">
-                <span class="card-type"><i class="fas fa-code"></i></span>
-              </div>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="card-date"
-                  ><i class="far fa-calendar"></i> 12 Jan 2026</span
-                >
-                <span class="card-author"
-                  ><i class="far fa-user"></i> fevunge, (with AI)</span
-                >
-              </div>
-              <h4 class="card-title">
-                Roadmap Completo: Junior a Sênior FullStack em 1 Ano
-              </h4>
-              <p class="card-description">
-                Objetivo: Dominar fundamentos e construir base forte em
-                TypeScript/Node.js/React, Go, Rust, arquitetura de sistemas,
-                performance, concorrência, Microserviços, cloud, CI/CD,
-                observabilidade, segurança, Contribuições open-source, sistema
-                complexo e liderança técnica
-              </p>
-              <a
-                href="https://drive.google.com/file/d/1TgOHKY5LaHB9EEMRUQPxSVR5GiXQi-7Z/view?usp=sharing"
-                class="card-button"
-                target="_blank"
-              >
-                <i class="fa-solid fa-file-pdf"></i>
-                Acessar Roadmap
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
+            <section class="links-section">
+                <div class="links-grid">
+                    <a
+                        href="https://github.com/fevunge"
+                        class="link-icon"
+                        title="GitHub"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                        href="https://x.com/fevunge"
+                        class="link-icon"
+                        title="Twitter"
+                    >
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/fevunge"
+                        class="link-icon"
+                        title="LinkedIn"
+                    >
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                        href="https://youtube.com/@fevunge"
+                        class="link-icon"
+                        title="YouTube"
+                    >
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </section>
+            <br /><br /><br />
+            <section class="search-section">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Search projects, articles, skills..."
+                        id="searchInput"
+                        onkeyup="filterArticles()"
+                    />
+                    <button class="search-clear" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div
+                        class="search-suggestions"
+                        id="searchSuggestions"
+                    ></div>
+                </div>
+            </section>
+            <section class="projects-section">
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="card-header">
+                            <img
+                                src="images/project1.png"
+                                alt="Projeto 1"
+                                class="card-cover"
+                            />
+                            <div class="card-overlay">
+                                <span class="card-type"
+                                    ><i class="fas fa-code"></i
+                                ></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-date"
+                                    ><i class="far fa-calendar"></i> 12 Jan
+                                    2026</span
+                                >
+                                <span class="card-author"
+                                    ><i class="far fa-user"></i> fevunge, (with
+                                    AI)</span
+                                >
+                            </div>
+                            <h4 class="card-title">
+                                Roadmap Completo: Junior a Sênior FullStack em 1
+                                Ano
+                            </h4>
+                            <p class="card-description">
+                                Objetivo: Dominar fundamentos e construir base
+                                forte em TypeScript/Node.js/React, Go, Rust,
+                                arquitetura de sistemas, performance,
+                                concorrência, Microserviços, cloud, CI/CD,
+                                observabilidade, segurança, Contribuições
+                                open-source, sistema complexo e liderança
+                                técnica
+                            </p>
+                            <a
+                                href="https://drive.google.com/file/d/1TgOHKY5LaHB9EEMRUQPxSVR5GiXQi-7Z/view?usp=sharing"
+                                class="card-button"
+                                target="_blank"
+                            >
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Acessar Roadmap
+                            </a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-header">
+                            <img
+                                src="images/project2.webp"
+                                alt="Projeto 2"
+                                class="card-cover"
+                            />
+                            <div class="card-overlay">
+                                <span class="card-type"
+                                    ><i class="fas fa-code"></i
+                                ></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-date"
+                                    ><i class="far fa-calendar"></i> 10 Jan
+                                    2026</span
+                                >
+                                <span class="card-author"
+                                    ><i class="far fa-user"></i> fevunge</span
+                                >
+                            </div>
+                            <h4 class="card-title">
+                                Entendendo e codificando fractais de forma
+                                simples
+                            </h4>
+                            <p class="card-description">
+                                Desenvolvi um programa em C (usando a biblioteca
+                                gráfica, a minilibx), para calcular, renderizar
+                                e explorar fractais.
+                            </p>
+                            <a
+                                href="https://drive.google.com/file/d/1TgOHKY5LaHB9EEMRUQPxSVR5GiXQi-7Z/view?usp=sharing"
+                                class="card-button"
+                                target="_blank"
+                            >
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Acessar Roadmap
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-      <div class="vim-editor">
-        <div class="vim-statusbar">
-          <span class="vim-mode">-- NORMAL --</span>
-          <span class="vim-file">about.json</span>
-          <span class="vim-position">1,1</span>
-        </div>
+            <div class="vim-editor">
+                <div class="vim-statusbar">
+                    <span class="vim-mode">-- NORMAL --</span>
+                    <span class="vim-file">about.json</span>
+                    <span class="vim-position">1,1</span>
+                </div>
 
-        <pre><code class="language-json">
+                <pre><code class="language-json">
 {
   "name": "Fernando Vunge",
   "role": "Human Coder",
   "timezone": "Luanda, Africa",
   "passions": [
+    "Good vibe",
     "Technology",
     "Open Source",
     "Linux",
-    "Terminal"
+    "Math"
   ],
   "setup": {
     "os": "Arch Linux",
-    "terminal": "Alacritty",
-    "shell": "Oh My Zsh",
-    "prompt": "Starship",
-    "editor": "Neovim"
+    "terminal": "Tmux",
+    "shell": "zsh",
+    "editor": "vscode"
   },
   "skills": [
     "JavaScript",
@@ -151,6 +216,13 @@
     "GO",
     "HTML, yaml, json"
   ],
+  "devops": [
+    "Docker / Docker Composer",
+    "Git",
+    "Linux Server",
+    "CI/CD",
+    "Scripting"
+  ],
   "hobbies": [
     "Contributing to Open Source",
     "Writing technical articles",
@@ -160,16 +232,16 @@
   "philosophy": "Clean code, elegant solutions"
 }
       </code></pre>
-        <div class="vim-commandline">:wq</div>
-      </div>
-    </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
-      integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https:///prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+                <div class="vim-commandline">:wq</div>
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
+            integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https:///prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
