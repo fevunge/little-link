@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/sheep.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>home/projects/</title>
+</head>
+<body>
+    <div class="terminal">
+    <div class="prompt">
+      <span class="user">guest</span>
+      <span class="at">@</span>
+      <span class="host">ssh</span> <!-- Twist Lain com "cyber" -->
+      <span class="dir">/home</span>
+        <span class="at">$</span>
+      <span class="host">send-me-email</span>
+    </div>
+    <div class="output">
+      <span class="symbol">#</span> Skills
+
+        - HTML/CSS/JS
+        - C
+        - Java (Spring Boot)
+    </div>
+  </div>
+  <br>
+  <div class="terminal">
+
+    <div class="prompt">
+      <span class="user">fevunge</span>
+      <span class="at">@</span>
+      <span class="host">42 </span>
+      <span class="dir">~/portfolio</span>
+      <span class="symbol">❯</span>
+      <span class="exit-success"></span>
+    </div>
+
+<div class="terminal-input-container">
+  <span class="prompt-symbol">❯</span>
+  <div class="terminal-input-wrapper">
+    <input 
+      type="text" 
+      class="terminal-input" 
+      id="terminalInput" 
+      autocomplete="off" 
+      spellcheck="false"
+      placeholder="name"
+    >
+    <!-- O cursor é gerado via ::after no wrapper -->
+  </div>
+</div>
+    <!-- Seção About -->
+    <div class="prompt">
+      <span class="shell">[zsh]</span>
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/about</span>
+      <span class="symbol">❯</span>
+      <span class="command">cat about.md</span>
+    </div>
+    <div class="output">
+      <p>Olá! Sou Fernando, um dev apaixonado por terminais, temas como Catppuccin e vibes de Serial Experiments Lain. Meu portfolio é um terminal interativo (mas estático por agora).</p>
+      <p>Habilidades: HTML/CSS/JS, Python, AI tools como Grok.</p>
+      <p>Contato: <a href="mailto:fernando@example.com" class="link">fernando@example.com</a> | <a href="https://github.com/fernando" class="link">GitHub</a></p>
+    </div>
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/about</span>
+      <span class="symbol">❯</span>
+      <span class="exit-success"></span>
+    </div>
+
+    <!-- Seção Projetos - ls e detalhes -->
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/projects</span>
+      <span class="git-branch"> dev</span>
+      <span class="git-status">(modified)</span>
+      <span class="symbol">❯</span>
+      <span class="command">ls</span>
+    </div>
+    <div class="output projects-list">
+      <ul>
+        <li>project1 - Terminal Portfolio (este aqui!)</li>
+        <li>project2 - AI Chatbot em Python</li>
+        <!-- Adicione mais <li> aqui para novos projetos -->
+      </ul>
+    </div>
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/projects</span>
+      <span class="symbol">❯</span>
+      <span class="exit-success"></span>
+    </div>
+
+    <!-- Detalhe de um projeto (exemplo) -->
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/projects/project1</span>
+      <span class="symbol">❯</span>
+      <span class="command">cat description.txt</span>
+    </div>
+    <div class="output project-detail">
+      <p>Projeto: Terminal Portfolio</p>
+      <p>Descrição: Um site estilizado como terminal com tema Catppuccin e vibe Lain. Usando CSS glitch effects.</p>
+      <p>Tecnologias: HTML, CSS, inspiração Starship.</p>
+      <p>Link: <a href="https://github.com/fernando/terminal-portfolio" class="link">Repo</a></p>
+    </div>
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/projects/project1</span>
+      <span class="symbol">❯</span>
+      <span class="exit-success"></span>
+    </div>
+
+    <!-- Para adicionar mais projetos: Copie o bloco prompt + output project-detail -->
+
+    <!-- Seção Blog/Posts -->
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/blog</span>
+      <span class="symbol">❯</span>
+      <span class="command">ls -l</span>
+    </div>
+    <div class="output post-list">
+      <ul>
+        <li>post1.md - Como criar um terminal em HTML/CSS</li>
+        <li>post2.md - Explorando temas Catppuccin</li>
+        <!-- Adicione mais <li> aqui para novos posts -->
+      </ul>
+    </div>
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/blog</span>
+      <span class="symbol">❯</span>
+      <span class="exit-success"></span>
+    </div>
+
+    <!-- Detalhe de um post (exemplo com JSON e syntax) -->
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/blog/post1</span>
+      <span class="symbol">❯</span>
+      <span class="command">cat post1.md</span>
+    </div>
+    <div class="output post-detail">
+      <p>Título: Criando um Terminal em HTML</p>
+      <p>Conteúdo: Use classes como <span class="keyword">.prompt</span> e <span class="keyword">.output</span>. Exemplo de JSON config:</p>
+      <pre class="json">{
+  "<span class="string">theme</span>": "<span class="string">catppuccin</span>",
+  "<span class="string">vibe</span>": "<span class="string">lain</span>",
+  "<span class="string">active</span>": <span class="boolean">true</span>,
+  "<span class="string">stars</span>": <span class="number">42</span>
+}</pre>
+      <p>Mais detalhes: Adicione glitch com CSS keyframes.</p>
+    </div>
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio/blog/post1</span>
+      <span class="symbol">❯</span>
+      <span class="exit-success"></span>
+    </div>
+
+    <!-- Para adicionar mais posts: Copie o bloco prompt + output post-detail -->
+
+    <!-- Fim do terminal - Prompt final -->
+    <div class="prompt">
+      <span class="user">fernando</span>
+      <span class="at">@</span>
+      <span class="host">luanda-cyber</span>
+      <span class="dir">~/portfolio</span>
+      <span class="symbol">❯</span>
+    </div>
+  </div>
+    <script src="../script.js"></script>
+</body>
+</html>
