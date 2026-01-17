@@ -18,6 +18,20 @@ function filterArticles() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('terminalInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            const command = this.value.trim();
+            alert('Comando recebido: ' + command);
+            if (command) {
+            console.log('Comando digitado:', command);
+            this.value = '';
+            }
+        }
+        });
+
+        document.querySelector('.terminal').addEventListener('click', () => {
+        document.getElementById('terminalInput').focus();
+    });
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
