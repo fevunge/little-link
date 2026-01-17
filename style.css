@@ -1,44 +1,4 @@
 /* Catppuccin Mocha Color Palette */
-:root {
-  --rosewater: #f5e0dc;
-  --flamingo: #f2cdcd;
-  --pink: #f5c2e7;
-  --mauve: #cba6f7;
-  --red: #f38ba8;
-  --maroon: #eba0ac;
-  --peach: #fab387;
-  --yellow: #f9e2af;
-  --green: #a6e3a1;
-  --teal: #94e2d5;
-  --sky: #89dceb;
-  --sapphire: #74c7ec;
-  --blue: #89b4fa;
-  --lavender: #b4befe;
-  --text: #cdd6f4;
-  --subtext1: #bac2de;
-  --subtext0: #a6adc8;
-  --overlay2: #9399b2;
-  --overlay1: #7f849c;
-  --overlay0: #6c7086;
-  --surface2: #585b70;
-  --surface1: #45475a;
-  --surface0: #313244;
-  --base: #1e1e2e;
-  --mantle: #181825;
-  --crust: #11111b;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 @font-face {
   font-family: "JetBrainsMono";
   src:
@@ -46,657 +6,333 @@ a {
     local("Monospace");
 }
 
-body {
-  font-family: "JetBrainsMono", "Courier New", monospace;
-  background: var(--base);
-  color: var(--text);
-  line-height: 1.6;
-  min-height: 100vh;
-  overflow-x: hidden;
+/* ==============================================
+       Tema Catppuccin Mocha com Vibe Lain Chan
+       - Cores suaves pastéis do Catppuccin Mocha (dark mode base).
+       - Vibe Lain: Adicionado glitch effects (animações CSS para distorção cyberpunk),
+         tons mais cianos/verdes para "wired" feel, fontes monospace com scanlines opcionais.
+       - Efeitos: Glitch em hover para elementos interativos, fundo com leve ruído/estático.
+       ============================================== */
+
+    :root {
+      /* Catppuccin Mocha Palette - Ajustado para mais vibe Lain (mais azuis/verde-cyber) */
+      --rosewater: #f5e0dc;
+      --flamingo: #f2cdcd;
+      --pink: #f5c2e7;
+      --mauve: #cba6f7;
+      --red: #f38ba8;
+      --maroon: #eba0ac;
+      --peach: #fab387;
+      --yellow: #f9e2af;
+      --green: #a6e3a1; /* Verde cyber-Lain */
+      --teal: #94e2d5; /* Teal wired */
+      --sky: #89dceb;
+      --sapphire: #74c7ec;
+      --blue: #89b4fa; /* Azul principal Lain-inspired */
+      --lavender: #b4befe;
+      --text: #cdd6f4;
+      --subtext1: #bac2de;
+      --subtext0: #a6adc8;
+      --overlay2: #9399b2;
+      --overlay1: #7f849c;
+      --overlay0: #6c7086;
+      --surface2: #585b70;
+      --surface1: #45475a;
+      --surface0: #313244;
+      --base: #1e1e2e; /* Fundo escuro base */
+      --mantle: #181825;
+      --crust: #11111b; /* Mais escuro para bordas */
+
+      /* Custom para terminal e syntax - Inspirado Starship/OhMyZsh com twist Lain */
+      --bg: var(--base);
+      --fg: var(--text);
+      --prompt-user: var(--blue); /* Azul Lain */
+      --prompt-host: var(--green); /* Verde wired */
+      --prompt-dir: var(--sapphire);
+      --prompt-git: var(--peach); /* Laranja git */
+      --prompt-symbol: var(--red); /* Vermelho erro/símbolo */
+      --prompt-exit-ok: var(--green);
+      --prompt-exit-fail: var(--red);
+
+      --comment: var(--overlay1);
+      --keyword: var(--mauve);
+      --string: var(--green); /* Verde string cyber */
+      --number: var(--peach);
+      --boolean: var(--sky); /* Azul booleano */
+      --function: var(--lavender);
+      --type: var(--yellow);
+      --link: var(--blue);
+      --link-hover: var(--sapphire);
+
+      /* Glitch effect para vibe Lain Chan */
+      --glitch-color1: rgba(134, 255, 232, 0.3); /* Cyan glitch */
+      --glitch-color2: rgba(255, 0, 255, 0.3); /* Magenta glitch */
+    }
+
+    /* Corpo geral - Fundo com leve ruído para vibe retro-Lain */
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "JetBrains Mono", "Fira Code", "Hack", "Menlo", monospace;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 2rem;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 4px 4px; /* Scanlines sutis */
+    }
+
+    /* Container principal do terminal - Com borda e sombra cyber */
+    .terminal {
+      background: var(--mantle);
+      color: var(--fg);
+      padding: 1.5rem;
+      border: 2px solid var(--surface0);
+      box-shadow: 0 0 50px rgba(137, 180, 250, 0.15); /* Glow azul Lain */
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      opacity: 0.8;
+    }
+
+    /* Efeito glitch no terminal inteiro (opcional, ativado em hover para interatividade) */
+    .terminal:hover::before {
+      content: '$';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(transparent, var(--glitch-color1) 0.1%, transparent 0.2%),
+        linear-gradient(transparent, var(--glitch-color2) 0.1%, transparent 0.2%);
+      opacity: 0.1;
+      animation: glitch 1s infinite steps(1);
+      pointer-events: none;
+    }
+
+    /* Input interativo no estilo terminal */
+.terminal-input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.8em;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: inherit;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.15) 1px,
-    transparent 1px,
-    transparent 2px
-  );
-  pointer-events: none;
-  z-index: 1000;
-  animation: scanline 8s linear infinite;
+.terminal-input-container .prompt-symbol {
+  color: var(--prompt-symbol);
+  font-weight: bold;
+  margin-right: 0.6ch;
+  user-select: none;
 }
 
-@keyframes scanline {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: inherit;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
 }
 
-/* Glitch Animation */
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translateX(-2px);
-  }
-  40% {
-    transform: translateX(-2px);
-  }
-  60% {
-    transform: translateX(2px);
-  }
-  80% {
-    transform: translateX(2px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Cursor piscante customizado */
+.terminal-input-wrapper {
   position: relative;
+  flex-grow: 1;
 }
 
-.profile-header {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: var(--surface0);
-  border: 2px solid var(--surface2);
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 20px rgba(203, 166, 247, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Terminal Prompt Indicator */
-.profile-header::before {
-  content: "_";
+.terminal-input::after {
+  content: "|";
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  color: var(--green);
-  font-size: 1.5rem;
-  animation: blink 1s infinite;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 1.1em;
+  background: var(--prompt-symbol);
+  opacity: 0;
+  animation: blink 1.1s step-end infinite;
 }
 
 @keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
-
-.profile-image {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 1.5rem;
-  border: 3px solid var(--mauve);
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(203, 166, 247, 0.4);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.profile-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(203, 166, 247, 0.6);
-}
-
-.profile-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.username {
-  font-size: 2rem;
-  color: var(--mauve);
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(203, 166, 247, 0.5);
-}
-
-.title {
-  font-size: 1.2rem;
-  color: var(--blue);
-  margin-bottom: 1rem;
-  font-weight: normal;
-}
-
-.bio {
-  color: var(--subtext0);
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
-  font-size: 0.95rem;
-}
-
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding-top: 1rem;
-  border-top: 1px solid var(--surface2);
-}
-
-.contact-item {
-  color: var(--text);
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.contact-item i {
-  color: var(--teal);
-}
-
-.section-title {
-  color: var(--green);
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding-left: 0.5rem;
-  border-left: 3px solid var(--green);
-}
-
-.links-section {
-  margin-bottom: 3rem;
-}
-
-.links-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: var(--surface0);
-  border: 2px solid var(--surface2);
-  border-radius: 8px;
-}
-
-.link-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: var(--surface1);
-  border: 2px solid var(--surface2);
-  border-radius: 8px;
-  color: var(--text);
-  font-size: 2rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-/* Tooltip on hover */
-.link-icon::before {
-  content: attr(title);
-  position: absolute;
-  bottom: -2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--surface2);
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-}
-
-.link-icon:hover {
-  background: var(--surface2);
-  border-color: var(--mauve);
-  color: var(--mauve);
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(203, 166, 247, 0.3);
-}
-
-.link-icon:hover::before {
-  opacity: 1;
-}
-
-.projects-section {
-  margin-bottom: 3rem;
-}
-
-.projects-grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.project-card {
-  background: var(--surface0);
-  border: 2px solid var(--surface2);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.project-card:hover {
-  border-color: var(--mauve);
-  box-shadow: 0 0 30px rgba(203, 166, 247, 0.2);
-  transform: translateY(-5px);
-}
-
-.card-header {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-}
-
-.card-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .card-cover {
-  transform: scale(1.05);
-}
-
-.card-overlay {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-.card-type {
-  background: var(--surface0);
-  border: 2px solid var(--mauve);
-  padding: 0.5rem;
-  border-radius: 50%;
-  color: var(--mauve);
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-}
-
-.card-content {
-  padding: 1.5rem;
-}
-
-.card-meta {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
-  color: var(--overlay2);
-}
-
-.card-meta i {
-  color: var(--teal);
-}
-
-.card-title {
-  color: var(--blue);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.card-description {
-  color: var(--subtext0);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.card-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  background: var(--surface1);
-  border: 2px solid var(--mauve);
-  border-radius: 6px;
-  color: var(--mauve);
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.card-button:hover {
-  background: var(--mauve);
-  color: var(--base);
-  box-shadow: 0 0 20px rgba(203, 166, 247, 0.4);
-}
-
-.about-section {
-  background: var(--surface0);
-  border: 2px solid var(--surface2);
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-.vim-editor {
-  background: var(--mantle);
-  border: 2px solid var(--surface1);
-  border-radius: 6px;
-  overflow: hidden;
-  font-family: "JetBrainsMono", monospace;
-  margin-bottom: 1.5rem;
-}
-
-.vim-statusbar {
-  background: var(--surface1);
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--surface2);
-  font-size: 0.85rem;
-}
-
-.vim-mode {
-  color: var(--green);
-  font-weight: bold;
-}
-
-.vim-file {
-  color: var(--blue);
-}
-
-.vim-position {
-  color: var(--overlay2);
-}
-
-pre {
-  margin: 0;
-  padding: 0;
-}
-
-.vim-content {
-  display: block;
-  padding: 1.5rem !important;
-  background: var(--crust) !important;
-  max-height: 500px;
-  overflow-y: auto;
-  white-space: pre;
-  font-family: "JetBrainsMono", monospace !important;
-  line-height: 1.8 !important;
-  font-size: 0.95rem !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* Override Prism.js colors with Catppuccin */
-.vim-content .token.property,
-.vim-content .token.tag,
-.vim-content .token.boolean,
-.vim-content .token.number,
-.vim-content .token.constant,
-.vim-content .token.symbol {
-  color: var(--blue) !important;
-}
-
-.vim-content .token.string,
-.vim-content .token.char,
-.vim-content .token.attr-value {
-  color: var(--green) !important;
-}
-
-.vim-content .token.punctuation {
-  color: var(--text) !important;
-}
-
-.vim-content .token.operator,
-.vim-content .token.entity,
-.vim-content .token.url {
-  color: var(--sky) !important;
-}
-
-.vim-content .token.selector,
-.vim-content .token.keyword {
-  color: var(--mauve) !important;
-}
-
-.vim-content .token.function {
-  color: var(--blue) !important;
-}
-
-.vim-content .token.comment {
-  color: var(--overlay0) !important;
-}
-
-/* Vim Command Line */
-.vim-commandline {
-  background: var(--surface1);
-  padding: 0.5rem 1rem;
-  border-top: 1px solid var(--surface2);
-  color: var(--text);
-  font-size: 0.9rem;
-}
-
-.vim-commandline::before {
-  content: "";
-  animation: blink 1s infinite;
-}
-
-/* Scrollbar customization for Vim content */
-.vim-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.vim-content::-webkit-scrollbar-track {
-  background: var(--crust);
-}
-
-.vim-content::-webkit-scrollbar-thumb {
-  background: var(--surface2);
-  border-radius: 4px;
-}
-
-.vim-content::-webkit-scrollbar-thumb:hover {
-  background: var(--overlay0);
-}
-
-.footer-credits {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--surface2);
-  text-align: center;
-  color: var(--overlay2);
-  font-size: 0.9rem;
-}
-
-.footer-credits i {
-  color: var(--red);
-  animation: heartbeat 1.5s ease infinite;
-}
-
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  10%,
-  30% {
-    transform: scale(1.1);
-  }
-  20%,
-  40% {
-    transform: scale(1);
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-
-  .profile-header {
-    padding: 2rem 1rem;
-  }
-
-  .username {
-    font-size: 1.5rem;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .links-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .card-header {
-    height: 200px;
-  }
-
-  .section-title {
-    font-size: 1.2rem;
-  }
-}
-
-.search-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-
-/* Search Input */
-.search-input {
-  width: 100%;
-  padding: 1rem 1rem 1rem 3rem;
-  background: var(--surface0);
-  border: 2px solid var(--surface2);
-  border-radius: 8px;
-  color: var(--text);
-  font-family: "JetBrainsMono", monospace;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Terminal prompt indicator */
-.search-input::before {
-  content: ">";
-  position: absolute;
-  left: 1rem;
-  color: var(--green);
-  font-weight: bold;
-}
-
-.search-input:focus {
-  border-color: var(--mauve);
-  box-shadow: 0 0 20px rgba(203, 166, 247, 0.3);
-  background: var(--surface1);
-}
-
-.search-input::placeholder {
-  color: var(--overlay0);
-}
-
-/* Search Icon */
-.search-icon {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--green);
-  font-size: 1.2rem;
-  pointer-events: none;
-  transition: color 0.3s ease;
-}
-
-.search-input:focus ~ .search-icon {
-  color: var(--mauve);
-}
-
-/* Blinking cursor effect when focused */
-.search-input:focus::after {
-  content: "";
-  display: inline-block;
-  width: 2px;
-  height: 1em;
-  background: var(--text);
-  animation: blink-cursor 1s infinite;
-  margin-left: 2px;
-}
-
-@keyframes blink-cursor {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Clear button */
-.search-clear {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: var(--overlay2);
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  display: none;
-  transition: color 0.3s ease;
-}
-
-.search-clear:hover {
-  color: var(--red);
-}
-
-.search-input:not(:placeholder-shown) ~ .search-clear {
-  display: block;
-}
-
-/* Search suggestions dropdown */
-.search-suggestions {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 0;
-  right: 0;
-  background: var(--surface0);
-  border: 2px solid var(--surface2);
-  border-radius: 8px;
-  max-height: 300px;
-  overflow-y: auto;
-  display: none;
-  z-index: 100;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.search-suggestions.active {
-  display: block;
-}
+  from, to   { opacity: 0; }
+  50%        { opacity: 1; }
+}
+
+/* Quando o input está focado, mostra o cursor mais forte */
+.terminal-input:focus + .terminal-cursor {
+  animation: blink-focused 0.8s step-end infinite;
+}
+
+@keyframes blink-focused {
+  from, to   { opacity: 0.2; }
+  50%        { opacity: 1; }
+}
+
+/* Classe para esconder o cursor quando não estiver digitando (opcional) */
+.terminal-input:not(:focus)::after {
+  opacity: 0.4;
+}
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(2px, 1px); }
+      40% { transform: translate(-2px, -1px); }
+      60% { transform: translate(3px, 2px); }
+      80% { transform: translate(-1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    /* Prompt (estilo Starship com opções) */
+    .prompt {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3em;
+      margin-bottom: 0.4em;
+      user-select: none;
+    }
+
+    .prompt > span {
+      font-weight: 500;
+    }
+
+    .user { color: var(--prompt-user); }
+    .at { color: var(--comment); }
+    .host { color: var(--prompt-host); }
+    .dir { color: var(--prompt-dir); font-weight: 600; }
+    .git-branch { color: var(--prompt-git); font-weight: 500; }
+    .git-status { color: var(--prompt-git); font-style: italic; }
+    .symbol { color: var(--prompt-symbol); font-weight: bold; font-size: 1.1em; }
+    .exit-success::after { content: "✔"; color: var(--prompt-exit-ok); margin-left: 0.5ch; }
+    .exit-failure::after { content: "✘"; color: var(--prompt-exit-fail); margin-left: 0.5ch; }
+
+    /* Comando digitado */
+    .command {
+      color: var(--fg);
+      font-weight: 600;
+      margin-left: 0.5ch;
+      font-style: italic;
+    }
+
+    /* Saída geral */
+    .output {
+      margin: 0.5em 0 1em 2ch;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* Syntax highlighting */
+    .comment { color: var(--comment); font-style: italic; }
+    .keyword { color: var(--keyword); font-weight: 600; }
+    .string { color: var(--string); }
+    .number { color: var(--number); font-weight: 500; }
+    .boolean { color: var(--boolean); font-weight: bold; }
+    .function { color: var(--function); }
+    .type { color: var(--type); font-style: italic; }
+
+    /* JSON específico com padding */
+    .json {
+      margin: 1em 0 1.5em 1em;
+      background: var(--surface1);
+      border-radius: 6px;
+      border-left: 4px solid var(--blue); /* Borda cyber */
+      white-space: pre;
+      font-size: 0.95em;
+    }
+
+    /* Shell (indicador de shell, como bash ou zsh) */
+    .shell {
+      color: var(--overlay2);
+      font-style: italic;
+      margin-right: 0.5ch;
+    }
+
+    /* Para projetos e posts - Estilos específicos */
+    .projects-list {
+      margin: 0.5em 0 1em 2ch;
+      list-style: none;
+      padding: 0;
+    }
+
+    .projects-list li {
+      margin-bottom: 0.5em;
+    }
+
+    .project-detail {
+      margin: 1em 0 1.5em 3ch;
+      padding-left: 1ch;
+      border-left: 3px solid var(--green); /* Verde projeto */
+    }
+
+    .post-list {
+      margin: 0.5em 0 1em 2ch;
+      list-style: none;
+      padding: 0;
+    }
+
+    .post-list li {
+      margin-bottom: 0.5em;
+    }
+
+    .post-detail {
+      margin: 1em 0 1.5em 3ch;
+      padding: 1em;
+      background: var(--surface0);
+      border-radius: 6px;
+      border-left: 4px solid var(--teal); /* Teal post */
+    }
+
+    /* Links com hover glitch */
+    a, .link {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--link);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    a:hover, .link:hover {
+      color: var(--link-hover);
+      border-bottom: 1px solid var(--link-hover);
+      background: rgba(116, 199, 236, 0.1);
+    }
+
+    a:hover::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      background: var(--glitch-color1);
+      opacity: 0.2;
+      animation: glitch-link 0.5s infinite;
+    }
+
+    @keyframes glitch-link {
+      0% { transform: skew(0deg); }
+      50% { transform: skew(2deg); }
+      100% { transform: skew(0deg); }
+    }
+
+    /* Outras cenas de terminal: Erros, warnings, etc. */
+    .error {
+      color: var(--red);
+      font-weight: bold;
+    }
+
+    .warning {
+      color: var(--yellow);
+    }
+
+    .info {
+      color: var(--blue);
+    }
